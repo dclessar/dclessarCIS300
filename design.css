@@ -16,14 +16,14 @@
 * { box-sizing: border-box; }
 
 body {
-    background-color: #e1f4ec;
+    background-color: #ffffff;
     /* background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
     background-repeat: no-repeat; */
     color: #081611;
     font-family: Arial, Helvetica, sans-serif;
 }
 header {
-    background-color: #426fae;
+    background-color: #286750;
     color: #081611;
     /* background-image: url(sunset.jpg); */
     background-position: right;
@@ -48,7 +48,8 @@ header a:hover {
     text-decoration: none;
 }
 nav {
-    /* background-color: #FFFFFF; */
+    background-color: #426fae;
+    color: #e9f7f2;
     font-weight: bold;
     text-align: center;
     padding: 0;
@@ -60,7 +61,7 @@ nav a {
     text-decoration: none;
 }
 nav a:link {
-    color: #5C7FA3;
+    color: #d6ebff;
 }
 nav a:visited {
     color: #344873;
@@ -85,7 +86,7 @@ h1 {
     letter-spacing: 0.25em
 }
 h2 {
-    color: #1976D2;
+    color: #286750;
     font-family: Georgia, "Times New Roman", serif;
     text-shadow: 1px 1px #CCCCCC;
 }
@@ -106,7 +107,7 @@ main {
     padding-left: 30px;
     display: block;
     /* margin-left: 190px; */
-    background-color: #FFFFFF;
+    background-color: #e1f4ec;
     overflow: auto;
 }
 /* section {
@@ -122,10 +123,10 @@ footer {
     font-family: Georgia, "Times New Roman", serif;
     padding: 2em;
     /* margin-left: 190px; */
-    background-color: #FFFFFF;
+    background-color: #e1f4ec;
 }
 .resort {
-    color: #1976D2;
+    color: #286750;
     font-weight: bold;
 }
 #contact {
@@ -193,22 +194,21 @@ footer {
         box-shadow: 3px 3px #333333;
     }
     nav {
-        padding-left: 1em;
-        text-align: left;
+        /* padding-left: 1em; */
+        text-align: center;
     }
-}
-@supports (display: grid) {
     nav ul {
-        flex-direction: column;
+        /* flex-direction: column; */
         padding-top: 1em;
+        padding-bottom: 1em;
     }
     #wrapper {
         display: grid;
         grid-template-areas:
-            "header header"
-            "nav hero"
-            "nav main"
-            "nav footer";
+            "header"
+            "nav"
+            "main"
+            "footer";
     }
     header {
         grid-area: header;
@@ -226,3 +226,6 @@ footer {
         grid-area: hero;
     }
 }
+/* @supports (display: grid) {
+    
+} */
