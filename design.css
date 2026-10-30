@@ -1,0 +1,228 @@
+/* :root[data-theme="light"] {
+  --text: #081611;
+  --background: #e1f4ec;
+  --primary: #286750;
+  --secondary: #89c1d2;
+  --accent: #426fae;
+}
+:root[data-theme="dark"] {
+  --text: #e9f7f2;
+  --background: #0b1e16;
+  --primary: #98d7c0;
+  --secondary: #2d6576;
+  --accent: #517ebd;
+} */
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: #e1f4ec;
+    /* background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+    background-repeat: no-repeat; */
+    color: #081611;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #426fae;
+    color: #081611;
+    /* background-image: url(sunset.jpg); */
+    background-position: right;
+    background-repeat: no-repeat;
+    text-align: center;
+    /* height: 120px; */
+    /* padding-top: 30px; */
+    /* padding-left: 3em; */
+}
+header a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #90C7E3;
+    text-decoration: none;
+}
+nav {
+    /* background-color: #FFFFFF; */
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+    font-size: 120%;
+    /* float: left; */
+    /* width: 160px; */
+}
+nav a {
+    text-decoration: none;
+}
+nav a:link {
+    color: #5C7FA3;
+}
+nav a:visited {
+    color: #344873;
+}
+nav a:hover {
+    color: #A52A2A;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+nav li {
+    border-bottom: 1px solid #000033;
+}
+h1 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-family: Georgia, "Times New Roman", serif;
+    /* font-size: 3em; */
+    letter-spacing: 0.25em
+}
+h2 {
+    color: #1976D2;
+    font-family: Georgia, "Times New Roman", serif;
+    text-shadow: 1px 1px #CCCCCC;
+}
+h3 {
+    color: #000033;
+    font-family: Georgia, "Times New Roman", serif;
+}
+dt {
+    color: #002171;
+}
+main ul {
+    list-style-image: url(marker.gif)
+}
+main {
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    display: block;
+    /* margin-left: 190px; */
+    background-color: #FFFFFF;
+    overflow: auto;
+}
+/* section {
+    float: left;
+    width: 33%;
+    padding-left: 2em;
+    padding-right: 2em;
+} */
+footer {
+    font-size: 75%;
+    font-style: italic;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    padding: 2em;
+    /* margin-left: 190px; */
+    background-color: #FFFFFF;
+}
+.resort {
+    color: #1976D2;
+    font-weight: bold;
+}
+#contact {
+    font-size: 90%
+}
+#wrapper {
+    /* width: 80%; */
+    /* min-width: 960px; */
+    /* max-width: 2048px; */
+    /* margin: auto; */
+    background-color: #90C7E3;
+    /* border: 1px solid #000033; */
+    background-image: linear-gradient(to bottom, #FFFFFF, #90C7E3);
+    /* box-shadow: 3px 3px #333333; */
+}
+#homehero {
+    height: 300px;
+    background-image: url(coast2.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* margin-left: 190px; */
+}
+#yurthero {
+    height: 300px;
+    background-image: url(yurt.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* margin-left: 190px; */
+}
+#trailhero {
+    height: 300px;
+    background-image: url(trail.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    /* margin-left: 190px; */
+}
+@media (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+    nav li {
+        border-bottom: none;
+    }
+    section {
+        /* margin-left: 2em;
+        margin-right: 2em; */
+        float: left;
+        width: 33%;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+    .flow {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (min-width: 1024px) {
+    #wrapper {
+        width: 80%;
+        margin: auto;
+        border: 1px solid #000033;
+        box-shadow: 3px 3px #333333;
+    }
+    nav {
+        padding-left: 1em;
+        text-align: left;
+    }
+}
+@supports (display: grid) {
+    nav ul {
+        flex-direction: column;
+        padding-top: 1em;
+    }
+    #wrapper {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "nav hero"
+            "nav main"
+            "nav footer";
+    }
+    header {
+        grid-area: header;
+    }
+    nav {
+        grid-area: nav;
+    }
+    main {
+        grid-area: main;
+    }
+    footer {
+        grid-area: footer;
+    }
+    .hero {
+        grid-area: hero;
+    }
+}
